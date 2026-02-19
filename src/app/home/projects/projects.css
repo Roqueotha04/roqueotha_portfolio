@@ -1,15 +1,16 @@
 .projects-section {
-  background-color: #0D0C0C; /* El color que pediste */
-  padding: 140px 0; /* Mucha separación con el Hero */
+  background-color: #0D0C0C;
+  padding: 140px 0;
 }
 
 .section-label {
   font-family: "Trebuchet MS", sans-serif;
-  color: #A87A42; /* Tu cobre */
-  font-size: 13px;
-  letter-spacing: 5px;
+  color: #A87A42;
+  font-size: 28px;
+  letter-spacing: 11px;
   text-transform: uppercase;
-  margin-bottom: 100px;
+  margin-bottom: 130px;
+  text-align: center;
 }
 
 .project-list {
@@ -19,21 +20,21 @@
 
 .project-item {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Dividido mitad y mitad */
-  gap: 100px; /* Gran separación entre texto e imagen */
-  align-items: start;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  align-items: center;
   margin-bottom: 80px;
 }
 
 .project-title {
-  font-size: 42px;
+  font-size: 48px;
   font-weight: 500;
   color: #f5f5f5;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 
 .project-description p {
-  font-size: 19px;
+  font-size: 20px;
   color: #bfbfbf;
   margin-bottom: 25px;
   line-height: 1.8;
@@ -41,12 +42,13 @@
 
 .github-link {
   display: inline-block;
-  margin: 20px 0 40px 0;
+  margin: 15px 0 35px 0;
   color: #f5f5f5;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 17px;
   border-bottom: 1px solid #A87A42;
   padding-bottom: 5px;
+  text-decoration: none;
   transition: 0.3s;
 }
 
@@ -55,20 +57,31 @@
   border-bottom-color: #CFE838;
 }
 
-.tech-tags {
+.tech-tags-container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 35px;
 }
 
-.tech-tags span {
-  font-size: 13px;
-  color: #CFE838; /* Color lima técnico */
-  font-weight: bold;
-  letter-spacing: 1px;
+.tech-row {
+  display: flex;
+  gap: 35px;
 }
 
-/* Imagen / Placeholder */
+.tech-row i {
+  font-size: 42px;
+  transition: transform 0.3s ease;
+}
+
+.tech-row i:hover {
+  transform: scale(1.15);
+}
+
+.project-image-container {
+  width: 100%;
+}
+
 .image-placeholder {
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -80,7 +93,7 @@
 }
 
 .code-symbol {
-  font-size: 40px;
+  font-size: 50px;
   color: #2a2a2e;
   font-weight: bold;
 }
@@ -91,10 +104,19 @@
   margin: 60px 0 100px 0;
 }
 
-/* Responsivo para que no se rompa en móvil */
 @media (max-width: 900px) {
   .project-item {
     grid-template-columns: 1fr;
     gap: 40px;
+    align-items: start;
+  }
+
+  .project-title {
+    font-size: 36px;
+  }
+
+  .section-label {
+    font-size: 18px;
+    letter-spacing: 5px;
   }
 }

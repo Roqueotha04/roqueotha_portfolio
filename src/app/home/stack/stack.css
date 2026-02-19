@@ -1,61 +1,62 @@
 .stack-section {
-  background-color: var(--graphite); /* Usa el color de tu styles.css */
+  background-color: #0D0C0C;
   padding: 120px 0;
-  border-bottom: 1px solid var(--dark-gray);
+  border-bottom: 1px solid rgba(207, 172, 122, 0.1);
 }
 
 .section-label {
   text-align: center;
   margin-bottom: 90px;
-  font-size: 32px; /* Más grande y con presencia */
+  font-size: 28px;
   font-weight: 600;
   color: var(--copper);
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 8px;
   position: relative;
 }
 
-/* Línea sutil debajo del título para más seriedad */
 .section-label::after {
   content: '';
   display: block;
-  width: 50px;
+  width: 60px;
   height: 2px;
   background-color: var(--copper);
-  margin: 15px auto 0;
+  margin: 20px auto 0;
 }
 
 .stack-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Centra las cards de la última fila */
-  gap: 30px;
+  justify-content: center;
+  gap: 25px;
 }
 
 .stack-category {
-  flex: 1 1 320px; /* Base de 320px, puede crecer */
-  max-width: 350px; /* Evita que se estiren demasiado las 2 de abajo */
-  background: #161618;
-  border: 1px solid #2a2a2e;
-  padding: 45px 30px;
-  transition: all 0.3s ease;
+  flex: 1 1 300px;
+  max-width: 340px;
+  background: #121214;
+  border: 1px solid #1c1c1f;
+  padding: 40px 25px;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   display: flex;
   flex-direction: column;
 }
 
 .stack-category:hover {
   border-color: var(--copper);
-  background: #1a1a1d;
-  transform: translateY(-5px);
+  background: #161618;
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .stack-category h3 {
-  font-size: 22px;
+  font-size: 20px;
   color: #f5f5f5;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   text-align: center;
-  font-weight: 500;
-  border-bottom: 1px solid #2a2a2e;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #1c1c1f;
   padding-bottom: 15px;
 }
 
@@ -63,24 +64,47 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  text-align: center;
 }
 
 .stack-list li {
-  font-size: 17px;
-  color: var(--light-gray);
-  margin-bottom: 14px;
-  transition: color 0.2s;
+  font-size: 16px;
+  color: #bfbfbf;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: all 0.2s;
+}
+
+.stack-list li i {
+  font-size: 22px;
+  width: 25px;
+  text-align: center;
+}
+
+.stack-list li i:not(.colored) {
+  color: var(--copper);
+  opacity: 0.8;
+}
+
+.stack-list li .dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--copper);
+  border-radius: 50%;
+  margin-left: 10px;
+  margin-right: 9px;
+  display: inline-block;
 }
 
 .stack-list li:hover {
-  color: var(--tech-lime); /* El verde lima de los proyectos */
+  color: #f5f5f5;
+  transform: translateX(5px);
 }
 
-/* Responsivo para móviles */
 @media (max-width: 768px) {
   .stack-category {
-    flex: 1 1 100%; /* Una sola columna en móvil */
+    flex: 1 1 100%;
     max-width: 100%;
   }
 }
