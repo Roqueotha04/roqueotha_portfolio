@@ -5,40 +5,33 @@
     <div class="contact-content">
       <h3 class="contact-title">¿Listo para el siguiente despliegue?</h3>
       <p class="contact-lead">
-        Si buscás un desarrollador enfocado en arquitecturas robustas y código eficiente, 
-        estoy a un clic de distancia.
+        Si buscás un desarrollador enfocado en arquitecturas robustas, 
+        contactate conmigo si te interesa.
       </p>
 
-      <div class="contact-buttons-grid">
-        <a href="https://linkedin.com/in/roque-othacehe-a15085243" target="_blank" class="big-contact-btn">
-          <div class="btn-left">
-            <i class="devicon-linkedin-plain"></i>
-          </div>
+      <div class="contact-buttons-dual">
+        <a href="https://wa.me/5492236680996" target="_blank" class="big-contact-btn">
+          <div class="btn-left"><i class="devicon-whatsapp-plain colored"></i></div>
           <div class="btn-right">
-            <span class="btn-top">LinkedIn</span>
-            <span class="btn-bottom">linkedin.com/in/roque-othacehe</span>
+            <span class="btn-top">WhatsApp</span>
+            <span class="btn-bottom">+54 9 223 668-0996</span>
           </div>
         </a>
 
-        <a href="https://github.com/roqueotha04" target="_blank" class="big-contact-btn">
-          <div class="btn-left">
-            <i class="devicon-github-original"></i>
-          </div>
-          <div class="btn-right">
-            <span class="btn-top">GitHub</span>
-            <span class="btn-bottom">github.com/roqueotha04</span>
-          </div>
-        </a>
-
-        <a href="mailto:roqueotha04@gmail.com" class="big-contact-btn featured">
-          <div class="btn-left">
-            <i class="fa-regular fa-envelope"></i> </div>
+        <button type="button" (click)="copiarEmail()" class="big-contact-btn featured">
+          <div class="btn-left"><i class="devicon-google-plain"></i></div>
           <div class="btn-right">
             <span class="btn-top">Email Directo</span>
             <span class="btn-bottom">roqueotha04@gmail.com</span>
           </div>
-        </a>
+        </button>
       </div>
     </div>
   </div>
+
+  @if (isCopied()) {
+    <div class="toast-copiado">
+      ¡EMAIL COPIADO AL PORTAPAPELES!
+    </div>
+  }
 </section>

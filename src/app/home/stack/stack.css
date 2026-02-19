@@ -1,22 +1,19 @@
 .stack-section {
-  background-color: #1A1412; 
-  /* Reducido un 40% (de 120px a 72px) */
+  background-color: #111112; 
   padding: 72px 0;
-  border-top: 1px solid rgba(207, 172, 122, 0.05);
-  border-bottom: 1px solid rgba(207, 172, 122, 0.1);
+  border-top: 1px solid rgba(168, 122, 66, 0.1);
+  border-bottom: 1px solid rgba(168, 122, 66, 0.1);
 }
 
 .section-label {
-  /* Igualamos a la estética de Proyectos */
   font-family: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   text-align: center;
-  font-size: 42px; /* Más grande, igual que Proyectos */
-  font-weight: 800; /* Robusta */
-  color: #CFAC7A; 
+  font-size: 42px;
+  font-weight: 800;
+  color: #A87A42; 
   text-transform: uppercase;
-  letter-spacing: 6px; /* Ajustado para que sea más sólido */
+  letter-spacing: 6px;
   position: relative;
-  /* Reducido un 40% (de 90px a 54px) */
   margin-bottom: 54px;
 }
 
@@ -25,7 +22,7 @@
   display: block;
   width: 80px;
   height: 3px;
-  background-color: #CFAC7A;
+  background-color: #A87A42;
   margin: 15px auto 0;
   border-radius: 2px;
 }
@@ -40,18 +37,18 @@
 .stack-category {
   flex: 1 1 300px;
   max-width: 340px;
-  background: #120E0D; 
-  border: 1px solid #261F1D;
+  background: #161618; 
+  border: 1px solid #2a2a2e;
   padding: 40px 25px;
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   display: flex;
   flex-direction: column;
-  border-radius: 12px; /* Un toque de redondeo para modernizar */
+  border-radius: 12px;
 }
 
 .stack-category:hover {
-  border-color: #CFAC7A;
-  background: #1C1614;
+  border-color: #A87A42;
+  background: #1c1c1f;
   transform: translateY(-8px);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
 }
@@ -63,7 +60,7 @@
   text-align: center;
   font-weight: 600;
   letter-spacing: 1px;
-  border-bottom: 1px solid #261F1D;
+  border-bottom: 1px solid #2a2a2e;
   padding-bottom: 15px;
 }
 
@@ -90,14 +87,14 @@
 }
 
 .stack-list li i:not(.colored) {
-  color: #CFAC7A;
+  color: #A87A42;
   opacity: 0.9;
 }
 
 .stack-list li .dot {
   width: 6px;
   height: 6px;
-  background-color: #CFAC7A;
+  background-color: #A87A42;
   border-radius: 50%;
   margin-left: 10px;
   margin-right: 9px;
