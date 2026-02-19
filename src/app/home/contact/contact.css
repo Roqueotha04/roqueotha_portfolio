@@ -1,0 +1,96 @@
+.contact-section {
+  background-color: var(--black-deep);
+  padding: 140px 0;
+  text-align: center;
+}
+
+.section-label {
+  margin-bottom: 60px;
+  font-size: 13px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--copper);
+}
+
+.contact-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-title {
+  font-size: 52px; /* Bien grande como pediste */
+  font-weight: 500;
+  color: #f5f5f5;
+  margin-bottom: 25px;
+}
+
+.contact-lead {
+  font-size: 20px;
+  color: var(--light-gray);
+  margin-bottom: 80px;
+  line-height: 1.6;
+}
+
+/* Grilla de botones grandes */
+.contact-buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.big-contact-btn {
+  display: flex;
+  flex-direction: column;
+  padding: 35px;
+  background: #161618;
+  border: 1px solid #2a2a2e;
+  text-decoration: none;
+  text-align: left;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.big-contact-btn .btn-top {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--copper);
+  margin-bottom: 10px;
+}
+
+.big-contact-btn .btn-bottom {
+  font-size: 18px;
+  color: #f5f5f5;
+  font-weight: 500;
+}
+
+/* Hover effects */
+.big-contact-btn:hover {
+  background: #1a1a1d;
+  border-color: var(--copper);
+  transform: translateY(-5px);
+}
+
+/* Resaltar el del Email */
+.big-contact-btn.featured {
+  border-color: var(--dark-gray);
+  background: linear-gradient(145deg, #161618, #1c1c1f);
+}
+
+.big-contact-btn.featured:hover {
+  border-color: var(--tech-lime);
+}
+
+.big-contact-btn.featured:hover .btn-bottom {
+  color: var(--tech-lime);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .contact-title {
+    font-size: 36px;
+  }
+  
+  .contact-buttons-grid {
+    grid-template-columns: 1fr;
+  }
+}

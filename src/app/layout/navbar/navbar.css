@@ -1,0 +1,94 @@
+.navbar {
+  background-color: #2b2b2b;
+  padding: 20px 2%; /* Padding pequeño para llevar todo a los extremos */
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(207, 172, 122, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+/* Forzamos que cada sección ocupe un tercio exacto del ancho */
+.nav-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+/* Alineaciones específicas */
+.nav-section.left {
+  justify-content: flex-start;
+}
+
+.nav-section.center {
+  justify-content: center;
+}
+
+.nav-section.right {
+  justify-content: flex-end;
+}
+
+/* Estilos de los elementos */
+.logo {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #f5f5f5;
+  white-space: nowrap; /* Evita que el nombre se corte en dos filas */
+}
+
+.logo .thin {
+  font-weight: 300;
+  color: var(--copper);
+}
+
+.nav-links {
+  display: flex;
+  gap: 35px; /* Más espacio entre los links del centro */
+}
+
+.nav-links a {
+  color: #bfbfbf;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  position: relative;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #f5f5f5;
+}
+
+.nav-socials {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-icon {
+  padding: 8px 18px;
+  border: 1px solid var(--copper);
+  color: var(--copper);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 2px; /* Bordes más rectos para look industrial */
+  transition: 0.3s;
+  text-transform: uppercase;
+}
+
+.btn-icon:hover {
+  background: var(--copper);
+  color: #2b2b2b;
+}
+
+/* Responsivo: En tablets o celulares, el centro desaparece para no amontonar */
+@media (max-width: 1024px) {
+  .nav-section.center {
+    display: none;
+  }
+}

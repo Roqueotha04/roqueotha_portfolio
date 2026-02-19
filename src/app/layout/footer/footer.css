@@ -1,0 +1,98 @@
+.footer {
+  background-color: #0a0a0c;
+  padding: 60px 0; /* Más aire arriba y abajo */
+  border-top: 1px solid #1c1c1f;
+  color: var(--light-gray);
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--copper);
+  margin-bottom: 10px;
+}
+
+/* Lado Izquierdo */
+.copyright {
+  font-weight: 700;
+  color: #f5f5f5;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.tagline {
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+/* Centro */
+.footer-center {
+  text-align: center;
+}
+
+.footer-tech {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Lado Derecho (Status) */
+.footer-right {
+  text-align: right;
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.status-text {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: #CFE838; /* El verde lima que usamos para tech */
+  border-radius: 50%;
+  box-shadow: 0 0 8px #cfe838;
+  animation: pulse 2s infinite;
+}
+
+.location {
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+  .footer-right, .footer-center {
+    text-align: center;
+  }
+  .status-indicator {
+    justify-content: center;
+  }
+}
