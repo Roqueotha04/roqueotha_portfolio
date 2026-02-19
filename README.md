@@ -44,13 +44,17 @@ Over 80% unit test coverage using JUnit and JaCoCo.
 
 ```bash
 git clone https://github.com/your-username/your-repository.git
+
 cd project-name
+
 npm install
+
 ng serve
 
 Open in your browser at:
+http://localhost:4200
 
-    http://localhost:4200
+```
 
 ---
 
