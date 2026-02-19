@@ -1,27 +1,33 @@
 .stack-section {
-  background-color: #0D0C0C;
-  padding: 120px 0;
+  background-color: #1A1412; 
+  /* Reducido un 40% (de 120px a 72px) */
+  padding: 72px 0;
+  border-top: 1px solid rgba(207, 172, 122, 0.05);
   border-bottom: 1px solid rgba(207, 172, 122, 0.1);
 }
 
 .section-label {
+  /* Igualamos a la estética de Proyectos */
+  font-family: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   text-align: center;
-  margin-bottom: 90px;
-  font-size: 28px;
-  font-weight: 600;
-  color: var(--copper);
+  font-size: 42px; /* Más grande, igual que Proyectos */
+  font-weight: 800; /* Robusta */
+  color: #CFAC7A; 
   text-transform: uppercase;
-  letter-spacing: 8px;
+  letter-spacing: 6px; /* Ajustado para que sea más sólido */
   position: relative;
+  /* Reducido un 40% (de 90px a 54px) */
+  margin-bottom: 54px;
 }
 
 .section-label::after {
   content: '';
   display: block;
-  width: 60px;
-  height: 2px;
-  background-color: var(--copper);
-  margin: 20px auto 0;
+  width: 80px;
+  height: 3px;
+  background-color: #CFAC7A;
+  margin: 15px auto 0;
+  border-radius: 2px;
 }
 
 .stack-grid {
@@ -34,19 +40,20 @@
 .stack-category {
   flex: 1 1 300px;
   max-width: 340px;
-  background: #121214;
-  border: 1px solid #1c1c1f;
+  background: #120E0D; 
+  border: 1px solid #261F1D;
   padding: 40px 25px;
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   display: flex;
   flex-direction: column;
+  border-radius: 12px; /* Un toque de redondeo para modernizar */
 }
 
 .stack-category:hover {
-  border-color: var(--copper);
-  background: #161618;
+  border-color: #CFAC7A;
+  background: #1C1614;
   transform: translateY(-8px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
 }
 
 .stack-category h3 {
@@ -56,7 +63,7 @@
   text-align: center;
   font-weight: 600;
   letter-spacing: 1px;
-  border-bottom: 1px solid #1c1c1f;
+  border-bottom: 1px solid #261F1D;
   padding-bottom: 15px;
 }
 
@@ -83,14 +90,14 @@
 }
 
 .stack-list li i:not(.colored) {
-  color: var(--copper);
-  opacity: 0.8;
+  color: #CFAC7A;
+  opacity: 0.9;
 }
 
 .stack-list li .dot {
   width: 6px;
   height: 6px;
-  background-color: var(--copper);
+  background-color: #CFAC7A;
   border-radius: 50%;
   margin-left: 10px;
   margin-right: 9px;
@@ -106,5 +113,9 @@
   .stack-category {
     flex: 1 1 100%;
     max-width: 100%;
+  }
+  .section-label {
+    font-size: 28px;
+    letter-spacing: 3px;
   }
 }
