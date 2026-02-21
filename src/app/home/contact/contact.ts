@@ -1,5 +1,6 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { LanguageService } from '../../services/language';
 
 @Component({
   selector: 'app-contact',
@@ -9,6 +10,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './contact.css',
 })
 export class Contact {
+  langService = inject(LanguageService);
   email = 'roqueotha04@gmail.com';
   isCopied = signal(false); 
 

@@ -1,20 +1,19 @@
 <section id="stack" class="stack-section">
   <div class="container">
-    <h2 class="section-label">Habilidades Técnicas</h2>
+    <h2 class="section-label">{{ langService.isEnglish() ? 'Technical Skills' : 'Habilidades Técnicas' }}</h2>
 
     <div class="stack-grid">
 
-        <div class="stack-category">
+      <div class="stack-category">
         <h3>Testing & Quality</h3>
         <ul class="stack-list">
           <li><i class="devicon-junit-plain colored"></i> JUnit 5</li>
           <li><i class="devicon-codepen-plain"></i> Mockito</li>
           <li><i class="devicon-framermotion-original"></i> JaCoCo Coverage</li>
-          <li><span class="dot"></span> Integration Testing</li>
+          <li><span class="dot"></span> {{ langService.isEnglish() ? 'Integration Testing' : 'Tests de Integración' }}</li>
         </ul>
       </div>
 
-      
       <div class="stack-category">
         <h3>Backend Development</h3>
         <ul class="stack-list">
@@ -29,12 +28,12 @@
       </div>
       
       <div class="stack-category">
-        <h3>Databases</h3>
+        <h3>{{ langService.isEnglish() ? 'Databases' : 'Bases de Datos' }}</h3>
         <ul class="stack-list">
           <li><i class="devicon-postgresql-plain colored"></i> PostgreSQL</li>
           <li><i class="devicon-mysql-original colored"></i> MySQL</li>
           <li><i class="devicon-azuresqldatabase-plain colored"></i> Neon DB</li>
-          <li><span class="dot"></span> Query Optimization</li>
+          <li><span class="dot"></span> {{ langService.isEnglish() ? 'Query Optimization' : 'Optimización de Consultas' }}</li>
         </ul>
       </div>
 

@@ -3,18 +3,20 @@
     
     <div class="footer-left">
       <p class="copyright">© 2026 ROQUE OTHACEHE</p>
-      <p class="tagline">Construyendo arquitecturas escalables.</p>
+      <p class="tagline">
+        {{ langService.isEnglish() ? 'Building scalable architectures.' : 'Construyendo arquitecturas escalables.' }}
+      </p>
     </div>
 
     <div class="footer-center">
-      <p class="footer-label">Stack del Sitio</p>
+      <p class="footer-label">{{ langService.isEnglish() ? 'Site Stack' : 'Stack del Sitio' }}</p>
       <p class="footer-tech">Angular 19</p>
     </div>
 
     <div class="footer-right">
       <div class="status-indicator">
         <span class="dot"></span>
-        <span class="status-text">SISTEMA ONLINE</span>
+        <span class="status-text">{{ langService.isEnglish() ? 'SYSTEM ONLINE' : 'SISTEMA ONLINE' }}</span>
       </div>
       <p class="location">Mar del Plata, Argentina</p>
     </div>

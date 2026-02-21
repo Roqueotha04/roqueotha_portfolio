@@ -7,15 +7,20 @@
 
   <div class="nav-section center">
     <div class="nav-links">
-      <a href="#hero" class="nav-btn">Inicio</a>
-      <a href="#projects" class="nav-btn">Proyectos</a>
+      <a href="#hero" class="nav-btn">{{ langService.isEnglish() ? 'Home' : 'Inicio' }}</a>
+      <a href="#projects" class="nav-btn">{{ langService.isEnglish() ? 'Projects' : 'Proyectos' }}</a>
       <a href="#stack" class="nav-btn">Stack</a>
-      <a href="#contact" class="nav-btn">Contacto</a>
+      <a href="#contact" class="nav-btn">{{ langService.isEnglish() ? 'Contact' : 'Contacto' }}</a>
     </div>
   </div>
 
   <div class="nav-section right">
     <div class="nav-socials">
+      <div class="lang-switcher" (click)="langService.toggle()">
+        <span [class.active]="!langService.isEnglish()">ESP</span>
+        <span [class.active]="langService.isEnglish()">ENG</span>
+      </div>
+
       <a href="https://github.com/roqueotha04" target="_blank" class="social-icon">
         <i class="devicon-github-original"></i>
       </a>

@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { LanguageService } from '../../services/language';
 
 @Component({
   selector: 'app-navbar',
-  imports: [],
+  standalone: true, // Asegúrate de que sea standalone si usas imports
   templateUrl: './navbar.html',
   styleUrl: './navbar.css',
 })
 export class Navbar {
-
+  langService = inject(LanguageService);
 }

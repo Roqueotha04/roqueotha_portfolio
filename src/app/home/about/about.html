@@ -1,19 +1,36 @@
 <section id="about" class="about-section">
   <div class="container">
-    <h2 class="section-label">Sobre Mí</h2>
+    <h2 class="section-label">{{ langService.isEnglish() ? 'About Me' : 'Sobre Mí' }}</h2>
     
     <div class="about-grid">
       <div class="about-text">
-        <h3 class="about-subtitle">Desarrollador backend y docente</h3>
-        <p>
-          Especializado en el ecosistema <strong>Java y Spring</strong>. Mi foco se encuentra en el diseño de APIs REST, priorizando seguridad, escalabilidad y buenas prácticas de arquitectura.
-        </p>
-        <p>
-          También tengo experiencia en frontend con <strong>TypeScript y Angular</strong>, lo que me permite comprender el flujo completo de una aplicación, aunque mi enfoque profesional está orientado al backend.
-        </p>
-        <p>
-          Actualmente enfocado en consolidar experiencia en proyectos backend productivos.
-        </p>
+        <h3 class="about-subtitle">
+          {{ langService.isEnglish() ? 'Backend Developer & Educator' : 'Desarrollador backend y docente' }}
+        </h3>
+        
+        <ng-container *ngIf="!langService.isEnglish()">
+          <p>
+            Especializado en el ecosistema <strong>Java y Spring</strong>. Mi foco se encuentra en el diseño de APIs REST, priorizando seguridad, escalabilidad y buenas prácticas de arquitectura.
+          </p>
+          <p>
+            También tengo experiencia en frontend con <strong>TypeScript y Angular</strong>, lo que me permite comprender el flujo completo de una aplicación, aunque mi enfoque profesional está orientado al backend.
+          </p>
+          <p>
+            Actualmente enfocado en consolidar experiencia en proyectos backend productivos.
+          </p>
+        </ng-container>
+
+        <ng-container *ngIf="langService.isEnglish()">
+          <p>
+            Specialized in the <strong>Java and Spring</strong> ecosystem. My focus is on designing REST APIs, prioritizing security, scalability, and architectural best practices.
+          </p>
+          <p>
+            I also have experience in frontend development with <strong>TypeScript and Angular</strong>, which allows me to understand the complete application flow, although my professional focus is backend-oriented.
+          </p>
+          <p>
+            Currently focused on gaining hands-on experience in production-ready backend projects.
+          </p>
+        </ng-container>
       </div>
 
       <div class="about-visual">

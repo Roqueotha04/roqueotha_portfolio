@@ -1,6 +1,6 @@
 .hero {
   width: 100%;
-  padding: 84px 0 60px 0; 
+  padding: 176px 0 55.63px 0; 
   background-color: #2b2b2b;
   display: flex;
   justify-content: center;
@@ -150,6 +150,6 @@
   }
   
   .hero {
-    padding: 60px 0 60px 0;
+    padding: 140px 0 51.5px 0;
   }
 }

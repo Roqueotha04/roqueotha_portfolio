@@ -1,6 +1,6 @@
 <section id="projects" class="projects-section">
   <div class="container">
-    <h2 class="section-label">Proyectos Seleccionados</h2>
+    <h2 class="section-label">{{ langService.isEnglish() ? 'Selected Projects' : 'Proyectos Seleccionados' }}</h2>
 
     <div class="project-list">
       
@@ -8,18 +8,36 @@
         <div class="project-text">
           <h3 class="project-title">SuperHero Game</h3>
           <div class="project-description">
-            <p>
-              Plataforma de batalla de superhéroes utilizando Spring Boot 3 y Angular. Focalizado en la creacion de un sistema de usuarios real, con registro seguro, cifrado de contraseñas con BCrypt y validación de cuentas mediante envío de correos automáticos con Brevo.
-            </p>
-            <p>
-              Infraestructura desplegada en la nube (Vercel/Render/Neon), implementé un sistema de health-checks con Uptime Robot y warm-ups automáticos, bajando la latencia de 140 ms a 60 ms comparado al backend anterior.
+            <ng-container *ngIf="!langService.isEnglish()">
+              <p>
+                Plataforma de batalla de superhéroes utilizando Spring Boot 3 y Angular. Focalizado en la creacion de un sistema de usuarios real, con registro seguro, cifrado de contraseñas con BCrypt y validación de cuentas mediante envío de correos automáticos con Brevo.
+              </p>
+              <p>
+                Infraestructura desplegada en la nube (Vercel/Render/Neon), implementé un sistema de health-checks con Uptime Robot y warm-ups automáticos, bajando la latencia de 140 ms a 60 ms comparado al backend anterior.
+              </p>
+            </ng-container>
+
+            <ng-container *ngIf="langService.isEnglish()">
+              <p>
+                Superhero battle platform built with Spring Boot 3 and Angular. Focused on creating a real user system with secure registration, BCrypt password encryption, and account validation via automated emails using Brevo.
+              </p>
+              <p>
+                Cloud-deployed infrastructure (Vercel/Render/Neon), where I implemented a health-check system with Uptime Robot and automated warm-ups, reducing latency from 140 ms to 60 ms compared to the previous backend.
+              </p>
+            </ng-container>
           </div>
 
-          <a href="https://superherogame-xi.vercel.app/" target="_blank" class="github-link">Ver Demo en Vivo —></a>
+          <a href="https://superherogame-xi.vercel.app/" target="_blank" class="github-link">
+            {{ langService.isEnglish() ? 'View Live Demo —>' : 'Ver Demo en Vivo —>' }}
+          </a>
           <br>
-          <a href="https://github.com/Roqueotha04/SuperHeroGame-Backend" target="_blank" class="github-link">Backend repo en Github —></a>
+          <a href="https://github.com/Roqueotha04/SuperHeroGame-Backend" target="_blank" class="github-link">
+            {{ langService.isEnglish() ? 'Backend repo on Github —>' : 'Backend repo en Github —>' }}
+          </a>
           <br>
-          <a href="https://github.com/Tincho1612/SuperHeroGames" target="_blank" class="github-link">Frontend repo en Github —></a>
+          <a href="https://github.com/Tincho1612/SuperHeroGames" target="_blank" class="github-link">
+            {{ langService.isEnglish() ? 'Frontend repo on Github —>' : 'Frontend repo en Github —>' }}
+          </a>
 
           <div class="tech-tags-container">
             <div class="tech-row">
@@ -49,18 +67,36 @@
         <div class="project-text">
           <h3 class="project-title">Book Loan System</h3>
           <div class="project-description">
-            <p>
-              Sistema de gestión de préstamos bibliotecarios. API REST diseñada bajo Clean Architecture con un fuerte enfoque en la integridad de datos y seguridad. Implementa Role-Based Access Control (RBAC) con Spring Security 6 para la gestión de permisos diferenciados entre administradores, bibliotecarios y usuarios.
-            </p>
-            <p>
-              Proyecto orientado a altos estándares de calidad de software: cuenta con cobertura de tests unitarios superior al 80% (JaCoCo), validaciones de negocio estrictas mediante Bean Validation y documentación técnica interactiva con Swagger/OpenAPI.
-            </p>
+            <ng-container *ngIf="!langService.isEnglish()">
+              <p>
+                Sistema de gestión de préstamos bibliotecarios. API REST diseñada bajo Clean Architecture con un fuerte enfoque en la integridad de datos y seguridad. Implementa Role-Based Access Control (RBAC) con Spring Security 6 para la gestión de permisos diferenciados entre administradores, bibliotecarios y usuarios.
+              </p>
+              <p>
+                Proyecto orientado a altos estándares de calidad de software: cuenta con cobertura de tests unitarios superior al 80% (JaCoCo), validaciones de negocio estrictas mediante Bean Validation y documentación técnica interactiva con Swagger/OpenAPI.
+              </p>
+            </ng-container>
+
+            <ng-container *ngIf="langService.isEnglish()">
+              <p>
+                Library loan management system. REST API designed under Clean Architecture with a strong focus on data integrity and security. Implements Role-Based Access Control (RBAC) with Spring Security 6 to manage permissions for admins, librarians, and users.
+              </p>
+              <p>
+                Project oriented towards high software quality standards: features unit test coverage exceeding 80% (JaCoCo), strict business validations using Bean Validation, and interactive technical documentation with Swagger/OpenAPI.
+              </p>
+            </ng-container>
           </div>
 
-          <a href="https://github.com/Roqueotha04/book-loan-system" target="_blank" class="github-link">Explorar en Github —></a>
+          <a href="https://github.com/Roqueotha04/book-loan-system" target="_blank" class="github-link">
+            {{ langService.isEnglish() ? 'Explore on Github —>' : 'Explorar en Github —>' }}
+          </a>
           
           <p class="swagger-note">
-            💡 Nota: La <strong>Swagger UI</strong> puede consultarse en <code>/swagger-ui.html</code> al desplegar el código localmente.
+            <ng-container *ngIf="!langService.isEnglish()">
+              💡 Nota: La <strong>Swagger UI</strong> puede consultarse en <code>/swagger-ui.html</code> al desplegar el código localmente.
+            </ng-container>
+            <ng-container *ngIf="langService.isEnglish()">
+              💡 Note: <strong>Swagger UI</strong> can be accessed at <code>/swagger-ui.html</code> when deploying the code locally.
+            </ng-container>
           </p>
 
           <div class="tech-row">
