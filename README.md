@@ -1,5 +1,7 @@
 # Roque Othacehe – Backend Developer Portfolio
 
+You cand find the deployed project at: https://portfolio-frontend-one-weld.vercel.app/
+
 This project is a personal portfolio landing page built with **Angular 20**, designed to showcase my work as a Backend Developer specialized in Java and Spring Boot.
 
 It serves as a central hub for my selected projects, technical stack, and contact information.
