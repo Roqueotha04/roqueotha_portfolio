@@ -114,6 +114,65 @@
         </div>
       </article>
 
+      <hr class="project-divider">
+
+      <article class="project-item">
+        <div class="project-text">
+          <h3 class="project-title">Student-Enrollment System (MVP)</h3>
+          <div class="project-description">
+            <ng-container *ngIf="!langService.isEnglish()">
+              <p>
+                Sistema de arquitectura distribuida diseñado para la gestión de inscripciones académicas. Utiliza <strong>OpenFeign</strong> para la comunicación síncrona entre microservicios que requieren respuestas inmediatas y <strong>RabbitMQ</strong> como Message Broker para procesos asíncronos como el envío automatizado de notificaciones por email.
+              </p>
+              <p>
+                Estructurado mediante un <strong>Maven Root POM</strong>, el ecosistema incluye servicios críticos de <strong>Spring Cloud</strong>: Netflix Eureka para el Service Discovery, Config Server para la centralización de propiedades y un API Gateway para el enrutamiento y seguridad de las peticiones.
+              </p>
+            </ng-container>
+
+            <ng-container *ngIf="langService.isEnglish()">
+              <p>
+                Distributed architecture system designed for academic enrollment management. It utilizes <strong>OpenFeign</strong> for synchronous communication between microservices requiring immediate responses and <strong>RabbitMQ</strong> as a Message Broker for asynchronous processes such as automated email notifications.
+              </p>
+              <p>
+                Structured via a <strong>Maven Root POM</strong>, the ecosystem includes critical <strong>Spring Cloud</strong> services: Netflix Eureka for Service Discovery, Config Server for centralized configuration, and an API Gateway for request routing and security.
+              </p>
+            </ng-container>
+          </div>
+
+          <a href="https://github.com/Roqueotha04/Microservices-Student-Course" target="_blank" class="github-link">
+            {{ langService.isEnglish() ? 'Explore on Github —>' : 'Explorar en Github —>' }}
+          </a>
+
+          <p class="swagger-note">
+            <ng-container *ngIf="!langService.isEnglish()">
+              ⚙️ <strong>Nota:</strong> Proyecto en desarrollo activo. Algunas funcionalidades del proyecto todavía no están completas, serán agregadas de manera progresiva con los dias.
+            </ng-container>
+            <ng-container *ngIf="langService.isEnglish()">
+              ⚙️ <strong>Note:</strong> Project under active development. Some features are not yet completed, they will be soon added within the pass of the days.
+            </ng-container>
+          </p>
+
+          <div class="tech-tags-container">
+            <div class="tech-row">
+              <i class="devicon-java-plain colored"></i>
+              <i class="devicon-spring-original colored"></i>
+              <i class="devicon-rabbitmq-original colored"></i>
+              <i class="devicon-docker-plain colored"></i>
+            </div>
+            <div class="tech-row">
+              <i class="devicon-postgresql-plain colored"></i>
+              <i class="devicon-mysql-original colored"></i>
+              <i class="devicon-junit-plain colored"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-image-container">
+          <img src="projects/Spring-Cloud2.png" alt="Spring Cloud Architecture" class="project-img">
+          <img src="projects/Spring-Cloud.png" alt="Eureka Dashboard" class="project-img">
+        </div>
+      </article>
+
     </div>
   </div>
 </section>

@@ -101,18 +101,18 @@
 }
 
 .devicon-angular-plain.colored, .devicon-angular-plain { color: #DD0031; }
+.devicon-rabbitmq-original.colored { color: #FF6600; }
 
 .tech-row i:hover {
   transform: translateY(-5px);
 }
 
-/* AQUÍ EL CAMBIO: Bajamos las imágenes para que alineen con el texto */
 .project-image-container {
   display: flex;
   flex-direction: column;
   gap: 40px; 
   width: 100%;
-  margin-top: 85px; /* Ajusta este valor según la altura de tus h3 */
+  margin-top: 85px; 
 }
 
 .project-img {

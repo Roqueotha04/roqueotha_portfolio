@@ -3,7 +3,7 @@
     <div class="hero-layout">
       
       <div class="hero-text">
-        <a href="/cv-roque-othacehe.pdf" 
+        <a [href]="langService.isEnglish() ? '/Cv_Roque_Othacehe_Java_EN.docx.pdf' : '/Cv_Roque_Othacehe_Java.docx.pdf'" 
             target="_blank" 
             rel="noopener" 
             class="cv-button" 
