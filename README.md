@@ -1,4 +1,4 @@
-# Roque Othacehe – Backend Developer Portfolio
+# Roque Othacehe – Backend Developer Portfolio.
 
 You cand find the deployed project at: https://portfolio-frontend-one-weld.vercel.app/
 
