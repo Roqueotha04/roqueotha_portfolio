@@ -6,10 +6,11 @@ import { Contact } from './contact/contact';
 import { Navbar } from '../layout/navbar/navbar';
 import { Footer } from '../layout/footer/footer';
 import { About } from './about/about';
+import { Experience } from './experience/experience';
 
 @Component({
   selector: 'app-home',
-  imports: [Navbar, Hero, About, Projects, Stack, Contact, Footer],
+  imports: [Navbar, Hero, About, Experience, Projects, Stack, Contact, Footer],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })

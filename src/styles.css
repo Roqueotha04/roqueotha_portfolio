@@ -32,10 +32,23 @@ body {
 }
 
 .container {
-  max-width: 1100px;
+  max-width: 1260px;
   margin: 0 auto;
   padding: 0 20px;
   width: 100%;
+}
+
+/* ── Scroll fade-in ────────────────────────────── */
+.fade-in-init {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.fade-in-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.65s ease, transform 0.65s ease;
 }
 
 section {
@@ -50,6 +63,28 @@ h2 {
   letter-spacing: 5px;
   color: var(--copper);
   font-weight: bold;
+}
+
+.section-label {
+  font-family: "Trebuchet MS", sans-serif;
+  color: var(--copper);
+  font-size: 39px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 60px;
+  text-align: center;
+  position: relative;
+}
+
+.section-label::after {
+  content: '';
+  display: block;
+  width: 85px;
+  height: 4px;
+  background-color: var(--copper);
+  margin: 15px auto 0;
 }
 
 a {

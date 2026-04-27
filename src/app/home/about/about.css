@@ -1,5 +1,5 @@
 .about-section {
-  background-color: #111112; 
+  background-color: #111112;
   padding: 100px 0;
   position: relative;
   border-top: 1px solid rgba(168, 122, 66, 0.1);
@@ -14,20 +14,21 @@
 
 .about-subtitle {
   font-family: "Trebuchet MS", sans-serif;
-  font-size: 32px;
+  font-size: 42px;
   color: #f5f5f5;
-  margin-bottom: 25px;
+  margin-bottom: 32px;
   font-weight: bold;
+  line-height: 1.15;
   border-left: 4px solid #A87A42;
-  padding-left: 20px;
+  padding-left: 24px;
 }
 
 .about-text p {
   font-family: "Trebuchet MS", sans-serif;
-  font-size: 19px;
+  font-size: 21px;
   color: #bfbfbf;
-  line-height: 1.9;
-  margin-bottom: 25px;
+  line-height: 2;
+  margin-bottom: 28px;
 }
 
 .about-text strong {
@@ -103,13 +104,13 @@
     padding-left: 0;
     padding-bottom: 8px;
     display: inline-block;
-    font-size: 24px;
+    font-size: 30px;
     margin-bottom: 20px;
   }
 
   .about-text p {
     text-align: left;
-    font-size: 17px;
+    font-size: 18px;
   }
 
   .visual-card {

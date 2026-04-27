@@ -11,27 +11,8 @@
 }
 
 .section-label {
-  font-family: 'Inter', sans-serif;
-  font-size: 38px;
-  font-weight: 800;
-  color: #A87A42;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  margin-bottom: 60px; /* Más separado del resto */
-  position: relative;
-  display: inline-block;
-}
-
-/* La línea dorada que subraya */
-.section-label::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -10px;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 3px;
-  background-color: #A87A42;
+  font-size: 39px;
+  margin-bottom: 60px;
 }
 
 .contact-title {

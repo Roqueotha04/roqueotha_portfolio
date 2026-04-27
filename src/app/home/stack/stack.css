@@ -6,25 +6,12 @@
 }
 
 .section-label {
-  font-family: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  text-align: center;
-  font-size: 42px;
-  font-weight: 800;
-  color: #A87A42; 
-  text-transform: uppercase;
-  letter-spacing: 6px;
-  position: relative;
+  font-size: 39px;
   margin-bottom: 54px;
 }
 
 .section-label::after {
-  content: '';
-  display: block;
-  width: 80px;
-  height: 3px;
-  background-color: #A87A42;
-  margin: 15px auto 0;
-  border-radius: 2px;
+  width: 85px;
 }
 
 .stack-grid {
@@ -35,7 +22,7 @@
 }
 
 .stack-category {
-  flex: 1 1 300px;
+  flex: 1 1 280px;
   max-width: 340px;
   background: #161618; 
   border: 1px solid #2a2a2e;
@@ -106,8 +93,14 @@
   transform: translateX(5px);
 }
 
+.stack-category--bottom {
+  flex: 1 1 340px;
+  max-width: 420px;
+}
+
 @media (max-width: 768px) {
-  .stack-category {
+  .stack-category,
+  .stack-category--bottom {
     flex: 1 1 100%;
     max-width: 100%;
   }

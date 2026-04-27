@@ -1,11 +1,11 @@
 import { Component, signal, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { LanguageService } from '../../services/language';
+import { FadeInDirective } from '../../directives/fade-in.directive';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule],
+  imports: [FadeInDirective],
   templateUrl: './contact.html',
   styleUrl: './contact.css',
 })

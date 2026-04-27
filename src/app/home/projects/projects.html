@@ -1,177 +1,189 @@
 <section id="projects" class="projects-section">
   <div class="container">
-    <h2 class="section-label">{{ langService.isEnglish() ? 'Selected Projects' : 'Proyectos Seleccionados' }}</h2>
+    <h2 class="section-label">{{ langService.isEnglish() ? 'Personal Projects' : 'Proyectos Personales' }}</h2>
 
-    <div class="project-list">
-      
-      <article class="project-item">
-        <div class="project-text">
-          <h3 class="project-title">SuperHero Game</h3>
-          <div class="project-description">
-            <ng-container *ngIf="!langService.isEnglish()">
-              <p>
-                Plataforma de batalla de superhéroes utilizando Spring Boot 3 y Angular. Focalizado en la creacion de un sistema de usuarios real, con registro seguro, cifrado de contraseñas con BCrypt y validación de cuentas mediante envío de correos automáticos con Brevo.
-              </p>
-              <p>
-                Infraestructura desplegada en la nube (Vercel/Render/Neon), implementé un sistema de health-checks con Uptime Robot y warm-ups automáticos, bajando la latencia de 140 ms a 60 ms comparado al backend anterior.
-              </p>
-            </ng-container>
+    <div class="carousel-wrapper">
 
-            <ng-container *ngIf="langService.isEnglish()">
-              <p>
-                Superhero battle platform built with Spring Boot 3 and Angular. Focused on creating a real user system with secure registration, BCrypt password encryption, and account validation via automated emails using Brevo.
-              </p>
-              <p>
-                Cloud-deployed infrastructure (Vercel/Render/Neon), where I implemented a health-check system with Uptime Robot and automated warm-ups, reducing latency from 140 ms to 60 ms compared to the previous backend.
-              </p>
-            </ng-container>
-          </div>
+      <div class="carousel-outer" appFadeIn>
 
-          <a href="https://superherogame-xi.vercel.app/" target="_blank" class="github-link">
-            {{ langService.isEnglish() ? 'View Live Demo —>' : 'Ver Demo en Vivo —>' }}
-          </a>
-          <br>
-          <a href="https://github.com/Roqueotha04/SuperHeroGame-Backend" target="_blank" class="github-link">
-            {{ langService.isEnglish() ? 'Backend repo on Github —>' : 'Backend repo en Github —>' }}
-          </a>
-          <br>
-          <a href="https://github.com/Tincho1612/SuperHeroGames" target="_blank" class="github-link">
-            {{ langService.isEnglish() ? 'Frontend repo on Github —>' : 'Frontend repo en Github —>' }}
-          </a>
+        <!-- Left arrow -->
+        <button class="nav-arrow nav-prev" (click)="navigate('prev')" [attr.aria-label]="langService.isEnglish() ? 'Previous' : 'Anterior'">
+          <span class="arrow-symbol">&#8592;</span>
+        </button>
 
-          <div class="tech-tags-container">
-            <div class="tech-row">
-              <i class="devicon-java-plain colored"></i>
-              <i class="devicon-spring-original colored"></i>
-              <i class="devicon-postgresql-plain colored"></i>
-              <i class="devicon-docker-plain colored"></i>
-            </div>
-            <div class="tech-row">
-              <i class="devicon-angular-plain colored"></i>
-              <i class="devicon-html5-plain colored"></i>
-              <i class="devicon-css3-plain colored"></i>
-              <i class="devicon-typescript-plain colored"></i>
-            </div>
-          </div>
+        <!-- Slide -->
+        <div class="carousel-slide" [class.fade-out]="!visible()">
+          @switch (currentIndex()) {
+
+            @case (0) {
+              <article class="project-item">
+                <div class="project-text">
+                  <h3 class="project-title">SuperHero Game</h3>
+                  <div class="project-description">
+                    @if (!langService.isEnglish()) {
+                      <p>
+                        Plataforma de batalla de superhéroes utilizando Spring Boot 3 y Angular. Focalizado en la creacion de un sistema de usuarios real, con registro seguro, cifrado de contraseñas con BCrypt y validación de cuentas mediante envío de correos automáticos con Brevo.
+                      </p>
+                      <p>
+                        Infraestructura desplegada en la nube (Vercel/Render/Neon), implementé un sistema de health-checks con Uptime Robot y warm-ups automáticos, bajando la latencia de 140 ms a 60 ms comparado al backend anterior.
+                      </p>
+                    } @else {
+                      <p>
+                        Superhero battle platform built with Spring Boot 3 and Angular. Focused on creating a real user system with secure registration, BCrypt password encryption, and account validation via automated emails using Brevo.
+                      </p>
+                      <p>
+                        Cloud-deployed infrastructure (Vercel/Render/Neon), where I implemented a health-check system with Uptime Robot and automated warm-ups, reducing latency from 140 ms to 60 ms compared to the previous backend.
+                      </p>
+                    }
+                  </div>
+                  <a href="https://superherogame-xi.vercel.app/" target="_blank" class="github-link">
+                    {{ langService.isEnglish() ? 'View Live Demo —>' : 'Ver Demo en Vivo —>' }}
+                  </a>
+                  <br>
+                  <a href="https://github.com/Roqueotha04/SuperHeroGame-Backend" target="_blank" class="github-link">
+                    {{ langService.isEnglish() ? 'Backend repo on Github —>' : 'Backend repo en Github —>' }}
+                  </a>
+                  <br>
+                  <a href="https://github.com/Tincho1612/SuperHeroGames" target="_blank" class="github-link">
+                    {{ langService.isEnglish() ? 'Frontend repo on Github —>' : 'Frontend repo en Github —>' }}
+                  </a>
+                  <div class="tech-tags-container">
+                    <div class="tech-row">
+                      <i class="devicon-java-plain colored"></i>
+                      <i class="devicon-spring-original colored"></i>
+                      <i class="devicon-postgresql-plain colored"></i>
+                      <i class="devicon-docker-plain colored"></i>
+                    </div>
+                    <div class="tech-row">
+                      <i class="devicon-angular-plain colored"></i>
+                      <i class="devicon-html5-plain colored"></i>
+                      <i class="devicon-css3-plain colored"></i>
+                      <i class="devicon-typescript-plain colored"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="project-image-container">
+                  <img src="projects/SuperHeroGame.png" alt="SuperHero Game Interfaz" class="project-img">
+                  <img src="projects/SuperHeroGame2.png" alt="SuperHero Game Lógica" class="project-img">
+                </div>
+              </article>
+            }
+
+            @case (1) {
+              <article class="project-item">
+                <div class="project-text">
+                  <h3 class="project-title">Book Loan System</h3>
+                  <div class="project-description">
+                    @if (!langService.isEnglish()) {
+                      <p>
+                        Sistema de gestión de préstamos bibliotecarios. API REST diseñada bajo Clean Architecture con un fuerte enfoque en la integridad de datos y seguridad. Implementa Role-Based Access Control (RBAC) con Spring Security 6 para la gestión de permisos diferenciados entre administradores, bibliotecarios y usuarios.
+                      </p>
+                      <p>
+                        Proyecto orientado a altos estándares de calidad de software: cuenta con cobertura de tests unitarios superior al 80% (JaCoCo), validaciones de negocio estrictas mediante Bean Validation y documentación técnica interactiva con Swagger/OpenAPI.
+                      </p>
+                    } @else {
+                      <p>
+                        Library loan management system. REST API designed under Clean Architecture with a strong focus on data integrity and security. Implements Role-Based Access Control (RBAC) with Spring Security 6 to manage permissions for admins, librarians, and users.
+                      </p>
+                      <p>
+                        Project oriented towards high software quality standards: features unit test coverage exceeding 80% (JaCoCo), strict business validations using Bean Validation, and interactive technical documentation with Swagger/OpenAPI.
+                      </p>
+                    }
+                  </div>
+                  <a href="https://github.com/Roqueotha04/book-loan-system" target="_blank" class="github-link">
+                    {{ langService.isEnglish() ? 'Explore on Github —>' : 'Explorar en Github —>' }}
+                  </a>
+                  <p class="swagger-note">
+                    @if (!langService.isEnglish()) {
+                      💡 Nota: La <strong>Swagger UI</strong> puede consultarse en <code>/swagger-ui.html</code> al desplegar el código localmente.
+                    } @else {
+                      💡 Note: <strong>Swagger UI</strong> can be accessed at <code>/swagger-ui.html</code> when deploying the code locally.
+                    }
+                  </p>
+                  <div class="tech-row">
+                    <i class="devicon-java-plain colored"></i>
+                    <i class="devicon-spring-original colored"></i>
+                    <i class="devicon-mysql-original colored"></i>
+                    <i class="devicon-junit-plain colored"></i>
+                    <i class="devicon-docker-plain colored"></i>
+                    <i class="devicon-microsoftsqlserver-plain colored"></i>
+                  </div>
+                </div>
+                <div class="project-image-container">
+                  <img src="projects/Book-Loan.png" alt="Book Loan Architecture" class="project-img">
+                  <img src="projects/Book-LoanSQL.png" alt="Book Loan Endpoints" class="project-img">
+                </div>
+              </article>
+            }
+
+            @case (2) {
+              <article class="project-item">
+                <div class="project-text">
+                  <h3 class="project-title">Student-Enrollment System (MVP)</h3>
+                  <div class="project-description">
+                    @if (!langService.isEnglish()) {
+                      <p>
+                        Sistema de arquitectura distribuida diseñado para la gestión de inscripciones académicas. Utiliza <strong>OpenFeign</strong> para la comunicación síncrona entre microservicios que requieren respuestas inmediatas y <strong>RabbitMQ</strong> como Message Broker para procesos asíncronos como el envío automatizado de notificaciones por email.
+                      </p>
+                      <p>
+                        Estructurado mediante un <strong>Maven Root POM</strong>, el ecosistema incluye servicios críticos de <strong>Spring Cloud</strong>: Netflix Eureka para el Service Discovery, Config Server para la centralización de propiedades y un API Gateway para el enrutamiento y seguridad de las peticiones.
+                      </p>
+                    } @else {
+                      <p>
+                        Distributed architecture system designed for academic enrollment management. It utilizes <strong>OpenFeign</strong> for synchronous communication between microservices requiring immediate responses and <strong>RabbitMQ</strong> as a Message Broker for asynchronous processes such as automated email notifications.
+                      </p>
+                      <p>
+                        Structured via a <strong>Maven Root POM</strong>, the ecosystem includes critical <strong>Spring Cloud</strong> services: Netflix Eureka for Service Discovery, Config Server for centralized configuration, and an API Gateway for request routing and security.
+                      </p>
+                    }
+                  </div>
+                  <a href="https://github.com/Roqueotha04/Microservices-Student-Course" target="_blank" class="github-link">
+                    {{ langService.isEnglish() ? 'Explore on Github —>' : 'Explorar en Github —>' }}
+                  </a>
+                  <p class="swagger-note">
+                    @if (!langService.isEnglish()) {
+                      ⚙️ <strong>Nota:</strong> Proyecto en desarrollo activo. Algunas funcionalidades todavía no están completas, serán agregadas progresivamente.
+                    } @else {
+                      ⚙️ <strong>Note:</strong> Project under active development. Some features are not yet completed and will be added progressively.
+                    }
+                  </p>
+                  <div class="tech-tags-container">
+                    <div class="tech-row">
+                      <i class="devicon-java-plain colored"></i>
+                      <i class="devicon-spring-original colored"></i>
+                      <i class="devicon-rabbitmq-original colored"></i>
+                      <i class="devicon-docker-plain colored"></i>
+                    </div>
+                    <div class="tech-row">
+                      <i class="devicon-postgresql-plain colored"></i>
+                      <i class="devicon-mysql-original colored"></i>
+                      <i class="devicon-junit-plain colored"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="project-image-container">
+                  <img src="projects/Spring-Cloud2.png" alt="Spring Cloud Architecture" class="project-img">
+                  <img src="projects/Spring-Cloud.png" alt="Eureka Dashboard" class="project-img">
+                </div>
+              </article>
+            }
+
+          }
         </div>
 
-        <div class="project-image-container">
-          <img src="projects/SuperHeroGame.png" alt="SuperHero Game Interfaz" class="project-img">
-          <img src="projects/SuperHeroGame2.png" alt="SuperHero Game Lógica" class="project-img">
-        </div>
-      </article>
+        <!-- Right arrow -->
+        <button class="nav-arrow nav-next" (click)="navigate('next')" [attr.aria-label]="langService.isEnglish() ? 'Next' : 'Siguiente'">
+          <span class="arrow-symbol">&#8594;</span>
+        </button>
 
-      <hr class="project-divider">
+      </div>
 
-      <article class="project-item">
-        <div class="project-text">
-          <h3 class="project-title">Book Loan System</h3>
-          <div class="project-description">
-            <ng-container *ngIf="!langService.isEnglish()">
-              <p>
-                Sistema de gestión de préstamos bibliotecarios. API REST diseñada bajo Clean Architecture con un fuerte enfoque en la integridad de datos y seguridad. Implementa Role-Based Access Control (RBAC) con Spring Security 6 para la gestión de permisos diferenciados entre administradores, bibliotecarios y usuarios.
-              </p>
-              <p>
-                Proyecto orientado a altos estándares de calidad de software: cuenta con cobertura de tests unitarios superior al 80% (JaCoCo), validaciones de negocio estrictas mediante Bean Validation y documentación técnica interactiva con Swagger/OpenAPI.
-              </p>
-            </ng-container>
-
-            <ng-container *ngIf="langService.isEnglish()">
-              <p>
-                Library loan management system. REST API designed under Clean Architecture with a strong focus on data integrity and security. Implements Role-Based Access Control (RBAC) with Spring Security 6 to manage permissions for admins, librarians, and users.
-              </p>
-              <p>
-                Project oriented towards high software quality standards: features unit test coverage exceeding 80% (JaCoCo), strict business validations using Bean Validation, and interactive technical documentation with Swagger/OpenAPI.
-              </p>
-            </ng-container>
-          </div>
-
-          <a href="https://github.com/Roqueotha04/book-loan-system" target="_blank" class="github-link">
-            {{ langService.isEnglish() ? 'Explore on Github —>' : 'Explorar en Github —>' }}
-          </a>
-          
-          <p class="swagger-note">
-            <ng-container *ngIf="!langService.isEnglish()">
-              💡 Nota: La <strong>Swagger UI</strong> puede consultarse en <code>/swagger-ui.html</code> al desplegar el código localmente.
-            </ng-container>
-            <ng-container *ngIf="langService.isEnglish()">
-              💡 Note: <strong>Swagger UI</strong> can be accessed at <code>/swagger-ui.html</code> when deploying the code locally.
-            </ng-container>
-          </p>
-
-          <div class="tech-row">
-            <i class="devicon-java-plain colored"></i>
-            <i class="devicon-spring-original colored"></i>
-            <i class="devicon-mysql-original colored"></i>
-            <i class="devicon-junit-plain colored"></i>
-            <i class="devicon-docker-plain colored"></i>
-          </div>
-        </div>
-
-        <div class="project-image-container">
-          <img src="projects/Book-Loan.png" alt="Book Loan Architecture" class="project-img">
-          <img src="projects/Book-LoanSQL.png" alt="Book Loan Endpoints" class="project-img">
-        </div>
-      </article>
-
-      <hr class="project-divider">
-
-      <article class="project-item">
-        <div class="project-text">
-          <h3 class="project-title">Student-Enrollment System (MVP)</h3>
-          <div class="project-description">
-            <ng-container *ngIf="!langService.isEnglish()">
-              <p>
-                Sistema de arquitectura distribuida diseñado para la gestión de inscripciones académicas. Utiliza <strong>OpenFeign</strong> para la comunicación síncrona entre microservicios que requieren respuestas inmediatas y <strong>RabbitMQ</strong> como Message Broker para procesos asíncronos como el envío automatizado de notificaciones por email.
-              </p>
-              <p>
-                Estructurado mediante un <strong>Maven Root POM</strong>, el ecosistema incluye servicios críticos de <strong>Spring Cloud</strong>: Netflix Eureka para el Service Discovery, Config Server para la centralización de propiedades y un API Gateway para el enrutamiento y seguridad de las peticiones.
-              </p>
-            </ng-container>
-
-            <ng-container *ngIf="langService.isEnglish()">
-              <p>
-                Distributed architecture system designed for academic enrollment management. It utilizes <strong>OpenFeign</strong> for synchronous communication between microservices requiring immediate responses and <strong>RabbitMQ</strong> as a Message Broker for asynchronous processes such as automated email notifications.
-              </p>
-              <p>
-                Structured via a <strong>Maven Root POM</strong>, the ecosystem includes critical <strong>Spring Cloud</strong> services: Netflix Eureka for Service Discovery, Config Server for centralized configuration, and an API Gateway for request routing and security.
-              </p>
-            </ng-container>
-          </div>
-
-          <a href="https://github.com/Roqueotha04/Microservices-Student-Course" target="_blank" class="github-link">
-            {{ langService.isEnglish() ? 'Explore on Github —>' : 'Explorar en Github —>' }}
-          </a>
-
-          <p class="swagger-note">
-            <ng-container *ngIf="!langService.isEnglish()">
-              ⚙️ <strong>Nota:</strong> Proyecto en desarrollo activo. Algunas funcionalidades del proyecto todavía no están completas, serán agregadas de manera progresiva con los dias.
-            </ng-container>
-            <ng-container *ngIf="langService.isEnglish()">
-              ⚙️ <strong>Note:</strong> Project under active development. Some features are not yet completed, they will be soon added within the pass of the days.
-            </ng-container>
-          </p>
-
-          <div class="tech-tags-container">
-            <div class="tech-row">
-              <i class="devicon-java-plain colored"></i>
-              <i class="devicon-spring-original colored"></i>
-              <i class="devicon-rabbitmq-original colored"></i>
-              <i class="devicon-docker-plain colored"></i>
-            </div>
-            <div class="tech-row">
-              <i class="devicon-postgresql-plain colored"></i>
-              <i class="devicon-mysql-original colored"></i>
-              <i class="devicon-junit-plain colored"></i>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-image-container">
-          <img src="projects/Spring-Cloud2.png" alt="Spring Cloud Architecture" class="project-img">
-          <img src="projects/Spring-Cloud.png" alt="Eureka Dashboard" class="project-img">
-        </div>
-      </article>
+      <!-- Dots -->
+      <div class="carousel-dots-row">
+        @for (i of [0, 1, 2]; track i) {
+          <span class="dot" [class.active]="currentIndex() === i"></span>
+        }
+      </div>
 
     </div>
   </div>

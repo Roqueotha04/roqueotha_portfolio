@@ -1,42 +1,101 @@
 .projects-section {
   background-color: #0D0C0C;
-  padding: 60px 0;
+  padding: 80px 0 100px;
+  border-top: 1px solid rgba(168, 122, 66, 0.1);
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1380px;
   margin: 0 auto;
   padding: 0 40px;
 }
 
 .section-label {
-  font-family: "Trebuchet MS", sans-serif;
-  color: #A87A42;
-  font-size: 46px; 
-  font-weight: bold;
-  letter-spacing: 4px; 
-  text-transform: uppercase;
-  margin-top: 20px; 
-  margin-bottom: 60px; 
-  text-align: center;
-  position: relative;
+  font-size: 39px;
+  margin-bottom: 60px;
 }
 
 .section-label::after {
-  content: '';
-  display: block;
-  width: 100px;
-  height: 4px;
-  background-color: #A87A42;
-  margin: 15px auto 0;
+  width: 85px;
 }
+
+/* ── Carousel shell ────────────────────────────── */
+
+.carousel-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.carousel-outer {
+  display: grid;
+  grid-template-columns: 56px 1fr 56px;
+  gap: 20px;
+  align-items: center;
+}
+
+/* ── Side arrows ───────────────────────────────── */
+
+.nav-arrow {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1.5px solid rgba(168, 122, 66, 0.35);
+  color: rgba(168, 122, 66, 0.65);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0;
+  transition: background 0.3s ease, border-color 0.3s ease,
+              color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.nav-arrow:hover {
+  background: rgba(168, 122, 66, 0.1);
+  border-color: #A87A42;
+  color: #A87A42;
+  box-shadow: 0 0 18px rgba(168, 122, 66, 0.25);
+  transform: scale(1.1);
+}
+
+.nav-arrow:active {
+  transform: scale(0.94);
+}
+
+.arrow-symbol {
+  font-size: 20px;
+  line-height: 1;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.nav-prev:hover .arrow-symbol { transform: translateX(-2px); }
+.nav-next:hover .arrow-symbol { transform: translateX(2px); }
+
+/* ── Slide ─────────────────────────────────────── */
+
+.carousel-slide {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  min-height: 420px;
+}
+
+.carousel-slide.fade-out {
+  opacity: 0;
+  transform: translateY(6px);
+}
+
+/* ── Project card ──────────────────────────────── */
 
 .project-item {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
   align-items: start;
-  margin-bottom: 100px; 
 }
 
 .project-title {
@@ -50,11 +109,11 @@
 .project-description p {
   font-family: "Trebuchet MS", sans-serif;
   font-size: 18px;
-  font-weight: 400; 
+  font-weight: 400;
   color: #bfbfbf;
   margin-bottom: 25px;
   line-height: 1.8;
-  text-align: justify; 
+  text-align: justify;
   hyphens: auto;
 }
 
@@ -68,7 +127,7 @@
   border-bottom: 2px solid #A87A42;
   padding-bottom: 5px;
   text-decoration: none;
-  transition: 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .github-link:hover {
@@ -85,7 +144,7 @@
 .tech-tags-container {
   display: flex;
   flex-direction: column;
-  gap: 25px; 
+  gap: 25px;
   margin-top: 20px;
 }
 
@@ -100,7 +159,8 @@
   transition: transform 0.3s ease;
 }
 
-.devicon-angular-plain.colored, .devicon-angular-plain { color: #DD0031; }
+.devicon-angular-plain.colored,
+.devicon-angular-plain { color: #DD0031; }
 .devicon-rabbitmq-original.colored { color: #FF6600; }
 
 .tech-row i:hover {
@@ -110,14 +170,13 @@
 .project-image-container {
   display: flex;
   flex-direction: column;
-  gap: 40px; 
+  gap: 40px;
   width: 100%;
-  margin-top: 85px; 
+  margin-top: 85px;
 }
 
 .project-img {
   width: 100%;
-  max-width: 100%;
   height: auto;
   object-fit: cover;
   image-rendering: -webkit-optimize-contrast;
@@ -125,24 +184,57 @@
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 8px;
   display: block;
-  transition: all 0.4s ease;
+  transition: border-color 0.4s ease;
 }
 
 .project-img:hover {
   border-color: #A87A42;
 }
 
-.project-divider {
-  border: 0;
-  border-top: 1px solid rgba(168, 122, 66, 0.1);
-  margin: 60px 0;
+/* ── Dots ──────────────────────────────────────── */
+
+.carousel-dots-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
 }
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #2a2a2e;
+  border: 1px solid rgba(168, 122, 66, 0.3);
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.dot.active {
+  background: #A87A42;
+  transform: scale(1.4);
+  border-color: #A87A42;
+}
+
+/* ── Responsive ────────────────────────────────── */
 
 @media (max-width: 900px) {
   .section-label {
     font-size: 30px;
     letter-spacing: 2px;
     margin-bottom: 40px;
+  }
+
+  .carousel-outer {
+    grid-template-columns: 44px 1fr 44px;
+    gap: 12px;
+  }
+
+  .nav-arrow {
+    min-height: 120px;
+  }
+
+  .arrow-symbol {
+    font-size: 20px;
   }
 
   .project-item {

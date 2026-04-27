@@ -1,0 +1,61 @@
+<section id="experience" class="experience-section">
+  <div class="container">
+    <h2 class="section-label">{{ langService.isEnglish() ? 'Professional Experience' : 'Experiencia Profesional' }}</h2>
+
+    <div class="experience-list">
+
+      <!-- Estudio Ve -->
+      <div class="exp-entry" appFadeIn [fadeInDelay]="0">
+        <div class="exp-logo">
+          <img [src]="estudiveLogoPath" alt="Estudio Ve" />
+        </div>
+        <div class="exp-content">
+          <h3 class="exp-role">{{ langService.isEnglish() ? 'Fullstack Developer' : 'Desarrollador Full Stack' }}</h3>
+          <div class="exp-meta">
+            <a href="https://estudiove.com" target="_blank" class="exp-company">Estudio Ve</a>
+            <span class="exp-meta-sep">|</span>
+            <span class="exp-period">{{ langService.isEnglish() ? '02/2026 – Present' : '02/2026 – Actualidad' }}</span>
+          </div>
+          <ul class="exp-bullets">
+            @if (!langService.isEnglish()) {
+              <li>Desarrollo de aplicaciones web con <strong>Next.js</strong>, implementando arquitecturas full stack desde bases de datos SQL hasta interfaces de usuario responsivas.</li>
+              <li>Integración de IA mediante <strong>Claude Code</strong> y desarrollo de skills personalizadas para automatización de flujos de trabajo.</li>
+              <li>Implementación de APIs y servicios de terceros <strong>(TN)</strong> para soluciones de negocio end-to-end.</li>
+            } @else {
+              <li>Web application development with <strong>Next.js</strong>, implementing full stack architectures from SQL databases to responsive user interfaces.</li>
+              <li>AI integration using <strong>Claude Code</strong> and development of custom skills for workflow automation.</li>
+              <li>Implementation of APIs and third-party services <strong>(TN)</strong> for end-to-end business solutions.</li>
+            }
+          </ul>
+        </div>
+      </div>
+
+      <!-- UTN -->
+      <div class="exp-entry" appFadeIn [fadeInDelay]="150">
+        <div class="exp-logo">
+          <img [src]="utnLogoPath" alt="Universidad Tecnológica Nacional" />
+        </div>
+        <div class="exp-content">
+          <h3 class="exp-role">{{ langService.isEnglish() ? 'Programming Instructor' : 'Docente de Programación' }}</h3>
+          <div class="exp-meta">
+            <span class="exp-company">Universidad Tecnológica Nacional</span>
+            <span class="exp-meta-sep">|</span>
+            <span class="exp-period">{{ langService.isEnglish() ? '02/2024 – Present' : '02/2024 – Actualidad' }}</span>
+          </div>
+          <ul class="exp-bullets">
+            @if (!langService.isEnglish()) {
+              <li>Docente de programación en la Universidad Tecnológica Nacional, con foco en desarrollo backend.</li>
+              <li>Experiencia con grupos de hasta <strong>100 alumnos</strong> en materias como Programación III (Spring Boot), Programación IV (Angular), Bases de datos (MySQL) y Metodología de sistemas (Scrum y Agile).</li>
+              <li>Experiencia en talleres de programación con lenguajes como <strong>Excel, Python e IA</strong>.</li>
+            } @else {
+              <li>Programming instructor at the National Technological University, focused on backend development.</li>
+              <li>Experience with groups of up to <strong>100 students</strong> in subjects such as Programming III (Spring Boot), Programming IV (Angular), Databases (MySQL), and Systems Methodology (Scrum and Agile).</li>
+              <li>Experience in programming workshops with <strong>Excel, Python, and AI</strong>.</li>
+            }
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

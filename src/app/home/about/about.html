@@ -2,35 +2,27 @@
   <div class="container">
     <h2 class="section-label">{{ langService.isEnglish() ? 'About Me' : 'Sobre Mí' }}</h2>
     
-    <div class="about-grid">
+    <div class="about-grid" appFadeIn>
       <div class="about-text">
         <h3 class="about-subtitle">
-          {{ langService.isEnglish() ? 'Backend Developer & Educator' : 'Desarrollador backend y docente' }}
+          {{ langService.isEnglish() ? 'Fullstack Developer & Educator' : 'Desarrollador Fullstack y Docente' }}
         </h3>
-        
-        <ng-container *ngIf="!langService.isEnglish()">
-          <p>
-            Especializado en el ecosistema <strong>Java y Spring</strong>. Mi foco se encuentra en el diseño de APIs REST, priorizando seguridad, escalabilidad y buenas prácticas de arquitectura.
-          </p>
-          <p>
-            También tengo experiencia en frontend con <strong>TypeScript y Angular</strong>, lo que me permite comprender el flujo completo de una aplicación, aunque mi enfoque profesional está orientado al backend.
-          </p>
-          <p>
-            Actualmente enfocado en consolidar experiencia en proyectos backend productivos.
-          </p>
-        </ng-container>
 
-        <ng-container *ngIf="langService.isEnglish()">
+        @if (!langService.isEnglish()) {
           <p>
-            Specialized in the <strong>Java and Spring</strong> ecosystem. My focus is on designing REST APIs, prioritizing security, scalability, and architectural best practices.
+            Desarrollador fullstack con experiencia en proyectos completos con <strong>Next.js</strong>, <strong>Spring Boot</strong> y SQL, integrando agentes IA (<strong>Claude Code / MCP</strong>) aplicando principios SOLID y Clean Code.
           </p>
           <p>
-            I also have experience in frontend development with <strong>TypeScript and Angular</strong>, which allows me to understand the complete application flow, although my professional focus is backend-oriented.
+            Combino experiencia en proyectos reales con mi rol docente en <strong>UTN</strong>, donde formo desarrolladores en arquitecturas backend y desarrollo end-to-end.
+          </p>
+        } @else {
+          <p>
+            Fullstack developer with hands-on experience in complete projects using <strong>Next.js</strong>, <strong>Spring Boot</strong>, and SQL, integrating AI agents (<strong>Claude Code / MCP</strong>) while applying SOLID principles and Clean Code.
           </p>
           <p>
-            Currently focused on gaining hands-on experience in production-ready backend projects.
+            I combine real-world project experience with my teaching role at <strong>UTN</strong>, where I train developers in backend architectures and end-to-end development.
           </p>
-        </ng-container>
+        }
       </div>
 
       <div class="about-visual">

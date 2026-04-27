@@ -3,12 +3,14 @@ import { LanguageService } from '../../services/language';
 import { FadeInDirective } from '../../directives/fade-in.directive';
 
 @Component({
-  selector: 'app-stack',
-  standalone: true,
+  selector: 'app-experience',
   imports: [FadeInDirective],
-  templateUrl: './stack.html',
-  styleUrl: './stack.css',
+  templateUrl: './experience.html',
+  styleUrl: './experience.css',
 })
-export class Stack {
+export class Experience {
   langService = inject(LanguageService);
+
+  estudiveLogoPath = '/experience/Dark%20Logo%20with%20Bright%20Orange%20Accent%20(5).jpg';
+  utnLogoPath = '/experience/utn-nacional.jpg';
 }
