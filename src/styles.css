@@ -6,14 +6,16 @@
 }
 
 :root {
-  --black-deep: #0d0d0f;    
-  --project-bg: #0D0C0C;   
+  --black-deep: #0d0d0f;
+  --project-bg: #0D0C0C;
   --graphite: #1c1c1f;
   --dark-gray: #2a2a2e;
   --light-gray: #bfbfbf;
   --white-smoke: #f2f2f2;
-  --copper: #A87A42;        
-  --tech-lime: #CFE838;    
+  --copper: #A87A42;
+  --gold-bright: #FFAA40;
+  --gold-glow: rgba(255, 170, 64, 0.5);
+  --tech-lime: #CFE838;
 }
 
 html {

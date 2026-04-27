@@ -1,6 +1,13 @@
 <section id="projects" class="projects-section">
   <div class="container">
-    <h2 class="section-label">{{ langService.isEnglish() ? 'Projects' : 'Proyectos' }}</h2>
+    <h2 class="section-label">{{ langService.isEnglish() ? 'Featured Projects' : 'Proyectos Destacados' }}</h2>
+    <p class="projects-intro">
+      @if (!langService.isEnglish()) {
+        Una selección de mis proyectos más relevantes. Para conocer más de mi trabajo pueden visitar <a href="https://estudiove.com" target="_blank" class="intro-link">estudiove.com →</a>
+      } @else {
+        A selection of my most relevant projects. To see more of my work, visit <a href="https://estudiove.com" target="_blank" class="intro-link">estudiove.com →</a>
+      }
+    </p>
 
     <div class="carousel-wrapper">
 
@@ -19,21 +26,21 @@
               <article class="project-item">
                 <div class="project-text">
                   <span class="project-badge">{{ langService.isEnglish() ? 'Production' : 'Producción' }}</span>
-                  <h3 class="project-title">Felton</h3>
+                  <h3 class="project-title">Felton Web</h3>
                   <div class="project-description">
                     @if (!langService.isEnglish()) {
                       <p>
-                        E-commerce desarrollado <strong>end-to-end</strong> para un cliente real, construido con <strong>Next.js</strong>, <strong>TypeScript</strong> y <strong>Tailwind CSS</strong>. Un producto con identidad visual propia, experiencia de compra cuidada y código de calidad profesional.
+                        E-commerce desarrollado <strong>end-to-end</strong> para <strong>Felton</strong>, un negocio de venta de ropa de alta calidad. Construido con <strong>Next.js</strong>, <strong>TypeScript</strong> y <strong>Tailwind CSS</strong>, con foco en una experiencia de compra cuidada y código de calidad profesional.
                       </p>
                       <p>
-                        Integración completa con la API de <strong>Tienda Nube</strong> para gestión de catálogo, carrito y procesamiento de pagos. Desarrollado en equipo dentro de <strong>Estudio Ve</strong>, aplicando componentización, buenas prácticas y flujo de trabajo colaborativo real.
+                        Integración completa con la API de <strong>Tienda Nube</strong> para gestión de catálogo, carrito y procesamiento de pagos. Desarrollado en equipo dentro de <strong>Estudio Ve</strong>, aplicando componentización, buenas prácticas y flujo de trabajo colaborativo.
                       </p>
                     } @else {
                       <p>
-                        <strong>End-to-end</strong> e-commerce built for a real client using <strong>Next.js</strong>, <strong>TypeScript</strong>, and <strong>Tailwind CSS</strong>. A product with its own visual identity, a refined shopping experience, and professional-quality code.
+                        <strong>End-to-end</strong> e-commerce built for <strong>Felton</strong>, a premium clothing brand. Developed with <strong>Next.js</strong>, <strong>TypeScript</strong>, and <strong>Tailwind CSS</strong>, focused on a refined shopping experience and professional-quality code.
                       </p>
                       <p>
-                        Full integration with the <strong>Tienda Nube</strong> API for catalog management, cart, and payment processing. Developed collaboratively within <strong>Estudio Ve</strong>, applying componentization, best practices, and real team workflow.
+                        Full integration with the <strong>Tienda Nube</strong> API for catalog management, cart, and payment processing. Developed collaboratively within <strong>Estudio Ve</strong>, applying componentization, best practices, and team workflow.
                       </p>
                     }
                   </div>
@@ -63,14 +70,14 @@
                   <div class="project-description">
                     @if (!langService.isEnglish()) {
                       <p>
-                        Sitio institucional y de portafolio de la agencia, desarrollado <strong>end-to-end</strong> con <strong>Next.js</strong>, <strong>TypeScript</strong> y <strong>Tailwind CSS</strong>. Un proyecto que representa la identidad técnica y visual del estudio ante clientes reales.
+                        Sitio web desarrollado <strong>end-to-end</strong> para la venta y exposición de <strong>Estudio Ve</strong>, una agencia de servicios digitales. Un proyecto que representa la identidad técnica y visual del estudio, construido con <strong>Next.js</strong>, <strong>TypeScript</strong> y <strong>Tailwind CSS</strong>.
                       </p>
                       <p>
                         Implementación de <strong>Prisma ORM</strong> para gestión de base de datos y sistema de <strong>blogs dinámicos</strong>. Arquitectura escalable, SEO optimizado y rendimiento superior como pilares del proyecto.
                       </p>
                     } @else {
                       <p>
-                        Institutional and portfolio site for the agency, developed <strong>end-to-end</strong> with <strong>Next.js</strong>, <strong>TypeScript</strong>, and <strong>Tailwind CSS</strong>. A project that represents the studio's technical and visual identity to real clients.
+                        Website developed <strong>end-to-end</strong> for the sales and exposure of <strong>Estudio Ve</strong>, a digital services agency. A project that represents the studio's technical and visual identity, built with <strong>Next.js</strong>, <strong>TypeScript</strong>, and <strong>Tailwind CSS</strong>.
                       </p>
                       <p>
                         Implementation of <strong>Prisma ORM</strong> for database management and a <strong>dynamic blog</strong> system. Scalable architecture, optimized SEO, and superior performance as core pillars of the project.
@@ -265,6 +272,7 @@
           <span class="dot" [class.active]="currentIndex() === i"></span>
         }
       </div>
+
 
     </div>
   </div>

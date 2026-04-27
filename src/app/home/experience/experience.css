@@ -1,6 +1,6 @@
 .experience-section {
   background-color: #111112;
-  padding: 100px 0;
+  padding: 50px 0 100px;
 }
 
 .section-label {
@@ -18,12 +18,19 @@
   display: grid;
   grid-template-columns: 220px 1fr;
   gap: 64px;
-  padding: 60px 0;
+  padding: 60px 28px;
   position: relative;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
 .exp-entry + .exp-entry {
   border-top: 1px solid rgba(168, 122, 66, 0.15);
+}
+
+.exp-entry:hover {
+  background: rgba(255, 140, 0, 0.015);
 }
 
 /* ── Logo column ───────────────────────────────── */
