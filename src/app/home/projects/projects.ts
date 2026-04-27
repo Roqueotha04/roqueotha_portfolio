@@ -12,7 +12,7 @@ import { FadeInDirective } from '../../directives/fade-in.directive';
 export class Projects {
   langService = inject(LanguageService);
 
-  readonly total = 3;
+  readonly total = 5;
   currentIndex = signal(0);
   visible = signal(true);
 

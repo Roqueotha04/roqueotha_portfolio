@@ -1,6 +1,6 @@
 <section id="projects" class="projects-section">
   <div class="container">
-    <h2 class="section-label">{{ langService.isEnglish() ? 'Personal Projects' : 'Proyectos Personales' }}</h2>
+    <h2 class="section-label">{{ langService.isEnglish() ? 'Projects' : 'Proyectos' }}</h2>
 
     <div class="carousel-wrapper">
 
@@ -16,6 +16,87 @@
           @switch (currentIndex()) {
 
             @case (0) {
+              <article class="project-item">
+                <div class="project-text">
+                  <span class="project-badge">{{ langService.isEnglish() ? 'Production' : 'Producción' }}</span>
+                  <h3 class="project-title">Felton</h3>
+                  <div class="project-description">
+                    @if (!langService.isEnglish()) {
+                      <p>
+                        E-commerce desarrollado <strong>end-to-end</strong> para un cliente real, construido con <strong>Next.js</strong>, <strong>TypeScript</strong> y <strong>Tailwind CSS</strong>. Un producto con identidad visual propia, experiencia de compra cuidada y código de calidad profesional.
+                      </p>
+                      <p>
+                        Integración completa con la API de <strong>Tienda Nube</strong> para gestión de catálogo, carrito y procesamiento de pagos. Desarrollado en equipo dentro de <strong>Estudio Ve</strong>, aplicando componentización, buenas prácticas y flujo de trabajo colaborativo real.
+                      </p>
+                    } @else {
+                      <p>
+                        <strong>End-to-end</strong> e-commerce built for a real client using <strong>Next.js</strong>, <strong>TypeScript</strong>, and <strong>Tailwind CSS</strong>. A product with its own visual identity, a refined shopping experience, and professional-quality code.
+                      </p>
+                      <p>
+                        Full integration with the <strong>Tienda Nube</strong> API for catalog management, cart, and payment processing. Developed collaboratively within <strong>Estudio Ve</strong>, applying componentization, best practices, and real team workflow.
+                      </p>
+                    }
+                  </div>
+                  <a href="https://felton.ar" target="_blank" class="github-link">
+                    {{ langService.isEnglish() ? 'Visit felton.ar —>' : 'Ver felton.ar —>' }}
+                  </a>
+                  <div class="tech-tags-container">
+                    <div class="tech-row">
+                      <i class="devicon-nextjs-plain colored"></i>
+                      <i class="devicon-typescript-plain colored"></i>
+                      <i class="devicon-tailwindcss-plain colored"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="project-image-container">
+                  <img src="projects/Felton%20web1.png" alt="Felton E-commerce" class="project-img">
+                  <img src="projects/Felton%20web2.png" alt="Felton Detalle" class="project-img">
+                </div>
+              </article>
+            }
+
+            @case (1) {
+              <article class="project-item">
+                <div class="project-text">
+                  <span class="project-badge">{{ langService.isEnglish() ? 'Production' : 'Producción' }}</span>
+                  <h3 class="project-title">Estudio Ve</h3>
+                  <div class="project-description">
+                    @if (!langService.isEnglish()) {
+                      <p>
+                        Sitio institucional y de portafolio de la agencia, desarrollado <strong>end-to-end</strong> con <strong>Next.js</strong>, <strong>TypeScript</strong> y <strong>Tailwind CSS</strong>. Un proyecto que representa la identidad técnica y visual del estudio ante clientes reales.
+                      </p>
+                      <p>
+                        Implementación de <strong>Prisma ORM</strong> para gestión de base de datos y sistema de <strong>blogs dinámicos</strong>. Arquitectura escalable, SEO optimizado y rendimiento superior como pilares del proyecto.
+                      </p>
+                    } @else {
+                      <p>
+                        Institutional and portfolio site for the agency, developed <strong>end-to-end</strong> with <strong>Next.js</strong>, <strong>TypeScript</strong>, and <strong>Tailwind CSS</strong>. A project that represents the studio's technical and visual identity to real clients.
+                      </p>
+                      <p>
+                        Implementation of <strong>Prisma ORM</strong> for database management and a <strong>dynamic blog</strong> system. Scalable architecture, optimized SEO, and superior performance as core pillars of the project.
+                      </p>
+                    }
+                  </div>
+                  <a href="https://estudiove.com" target="_blank" class="github-link">
+                    {{ langService.isEnglish() ? 'Visit estudiove.com —>' : 'Ver estudiove.com —>' }}
+                  </a>
+                  <div class="tech-tags-container">
+                    <div class="tech-row">
+                      <i class="devicon-nextjs-plain colored"></i>
+                      <i class="devicon-typescript-plain colored"></i>
+                      <i class="devicon-tailwindcss-plain colored"></i>
+                      <i class="devicon-prisma-original colored"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="project-image-container">
+                  <img src="projects/Estudio%20Ve%20web.png" alt="Estudio Ve Web" class="project-img">
+                  <img src="projects/Estudio%20ve%20web2.png" alt="Estudio Ve Detalle" class="project-img">
+                </div>
+              </article>
+            }
+
+            @case (2) {
               <article class="project-item">
                 <div class="project-text">
                   <h3 class="project-title">SuperHero Game</h3>
@@ -69,7 +150,7 @@
               </article>
             }
 
-            @case (1) {
+            @case (3) {
               <article class="project-item">
                 <div class="project-text">
                   <h3 class="project-title">Book Loan System</h3>
@@ -116,7 +197,7 @@
               </article>
             }
 
-            @case (2) {
+            @case (4) {
               <article class="project-item">
                 <div class="project-text">
                   <h3 class="project-title">Student-Enrollment System (MVP)</h3>
@@ -180,7 +261,7 @@
 
       <!-- Dots -->
       <div class="carousel-dots-row">
-        @for (i of [0, 1, 2]; track i) {
+        @for (i of [0, 1, 2, 3, 4]; track i) {
           <span class="dot" [class.active]="currentIndex() === i"></span>
         }
       </div>
